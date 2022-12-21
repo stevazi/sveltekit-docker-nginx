@@ -19,3 +19,14 @@ services:
     ports:
       - 80:80
       - 443:443
+
+  pb:
+    build: backend
+    image: pocketbase-custom
+    command: /pocketbase serve --dir /app/pb_data --http=pb:8090
+    user: ${UID}:${GID}
+    expose:
+      - 8090
+    working_dir: /app
+    volumes:
+      - ${PWD}/backend:/app
