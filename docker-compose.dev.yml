@@ -10,8 +10,9 @@ services:
       - 5050:5050
       - 24678:24678
     volumes:
-      - ./:/usr/src/app
+      - ./frontend/:/usr/src/app
       - /usr/src/app/node_modules
+      - ./nginx/dev/:/usr/src/app/nginx/dev/
   nginx:
     restart: always
     build:
