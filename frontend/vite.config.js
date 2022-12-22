@@ -3,8 +3,8 @@ import fs from 'fs';
 
 
 let httpsConfig = process.env.NODE_ENV === "development" ? {
-	key: fs.readFileSync('./nginx/dev/local.key.pem'),
-	cert: fs.readFileSync('./nginx/dev/local.cert.pem')
+	key: fs.readFileSync('./nginx/dev/privkey.pem'),
+	cert: fs.readFileSync('./nginx/dev/fullchain.pem')
 } : false;
 
 /** @type {import('vite').UserConfig} */

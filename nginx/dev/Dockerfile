@@ -8,5 +8,4 @@ COPY ./local.key.pem /etc/letsencrypt/live/example.com/privkey.pem
 
 EXPOSE 80
 EXPOSE 443
-
 CMD ["nginx", "-g", "daemon off;"]
